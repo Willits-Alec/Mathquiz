@@ -126,6 +126,7 @@
 			this.sum.Name = "sum";
 			this.sum.Size = new System.Drawing.Size(100, 48);
 			this.sum.TabIndex = 1;
+			this.sum.ValueChanged += new System.EventHandler(this.correct_Answer);
 			this.sum.Click += new System.EventHandler(this.answer_Enter);
 			this.sum.Enter += new System.EventHandler(this.answer_Enter);
 			// 

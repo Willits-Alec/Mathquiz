@@ -55,10 +55,6 @@ namespace MathQuiz
 				timeLeft = timeLeft - 1;
 				timeLabel.Text = timeLeft + " seconds";
 			}
-			else if (timeLeft <= 5)
-			{
-				timeLabel.BackColor = Color.Red;
-			}
 			else
 			{
 				timer1.Stop();
@@ -69,6 +65,17 @@ namespace MathQuiz
 				product.Value = multiplicand * multiplier;
 				quotient.Value = dividend / divisor;
 				startButton.Enabled = true;
+			}
+		}
+
+		private void correct_Answer(object sender, EventArgs e)
+		{
+			CheckTheAnswer();
+
+			if (CheckTheAnswer())
+			{
+				System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"C:\Windows\Media\chimes.wav");
+				player.Play();
 			}
 		}
 
@@ -135,6 +142,8 @@ namespace MathQuiz
 			else
 				return false;
 		}
+
+
 
 	}
 }
