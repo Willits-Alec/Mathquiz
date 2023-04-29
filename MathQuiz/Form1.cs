@@ -74,7 +74,7 @@ namespace MathQuiz
 
 			if (CheckTheAnswer())
 			{
-				System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"C:\Windows\Media\chimes.wav");
+				System.Media.SoundPlayer player = new System.Media.SoundPlayer(@"C:\Windows\Media\notify.wav");
 				player.Play();
 			}
 		}
